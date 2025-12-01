@@ -1,3 +1,253 @@
-Hi this is Linux and I am trying to automate everything. Including nginx and jenkins
-This is 2nd day
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ultra Gaming Café</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #050810;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    /* Neon Glow Animation */
+    @keyframes glow {
+        0% { text-shadow: 0 0 10px #00bfff; }
+        50% { text-shadow: 0 0 25px #0095ff; }
+        100% { text-shadow: 0 0 10px #00bfff; }
+    }
+
+    /* NAVBAR */
+    nav {
+        width: 100%;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+    }
+
+    nav h1 {
+        font-family: 'Orbitron', sans-serif;
+        color: #0af;
+        font-size: 30px;
+        font-weight: 700;
+        animation: glow 2s infinite ease-in-out;
+    }
+
+    nav a {
+        color: #cde8ff;
+        margin-left: 30px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        color: #0af;
+        text-shadow: 0 0 10px #0af;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        height: 100vh;
+        background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437e0?auto=format&fit=crop&w=1900&q=80') center/cover no-repeat fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 80px;
+        position: relative;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+        position: relative;
+        max-width: 600px;
+    }
+
+    .hero h2 {
+        font-size: 60px;
+        font-weight: 700;
+        color: #00bfff;
+        text-shadow: 0 0 15px #00bfff;
+        animation: fadeIn 2s ease forwards;
+    }
+
+    .hero p {
+        margin-top: 20px;
+        font-size: 20px;
+        opacity: 0.8;
+        animation: fadeIn 3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero button {
+        margin-top: 30px;
+        padding: 12px 25px;
+        background: linear-gradient(45deg, #0077ff, #00eaff);
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: 0.3s;
+        box-shadow: 0 0 20px rgba(0,170,255,0.5);
+    }
+
+    .hero button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 30px rgba(0,170,255,1);
+    }
+
+    /* SECTION STYLING */
+    .section {
+        padding: 70px 80px;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 40px;
+        color: #0af;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #0af;
+    }
+
+    .cards {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+
+    /* CARD */
+    .card {
+        background: #0d1425;
+        border: 1px solid #0af;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,170,255,0.2);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 30px rgba(0,170,255,0.6);
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 25px;
+        background: #000814;
+        border-top: 2px solid #0af;
+        color: #9fcfff;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h1>ULTRA GAMING CAFE</h1>
+    <div>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <div class="hero-content">
+        <h2>Experience True Gaming Power</h2>
+        <p>4K Monitors • RTX PCs • PS5 • RGB Atmosphere • Esports Setup</p>
+        <button onclick="alert('Booking system coming soon!')">BOOK NOW</button>
+    </div>
+</div>
+
+<!-- PRICING -->
+<div class="section" id="pricing">
+    <h2>Our Pricing</h2>
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d4?auto=format&fit=crop&w=500&q=60">
+            <h3>PC Zone (RTX)</h3>
+            <p>₹120 / hour</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1606813907291-64657c0e1ad8?auto=format&fit=crop&w=500&q=60">
+            <h3>PlayStation 5</h3>
+            <p>₹180 / hour</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1607853202273-797f1fd7d79c?auto=format&fit=crop&w=500&q=60">
+            <h3>VR Gaming</h3>
+            <p>₹250 / 30 mins</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- GALLERY -->
+<div class="section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="cards">
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=60"></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1580236007212-6a8c3b5c49c5?auto=format&fit=crop&w=600&q=60"></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=600&q=60"></div>
+
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p style="font-size:20px; margin-top:10px;">📍 Your City, India</p>
+    <p style="font-size:20px;">📞 +91 98765 43210</p>
+    <p style="font-size:20px;">📩 ultragamingcafe@example.com</p>
+</div>
+
+<footer>
+    © 2025 Ultra Gaming Café — All Rights Reserved
+</footer>
+
+</body>
+</html>
 
